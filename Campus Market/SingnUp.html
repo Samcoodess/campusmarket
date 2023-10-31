@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Campus Market</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        #email {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        #signup {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #signup:hover {
+            background-color: #222;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up for Campus Market</h2>
+        <form id="signup-form">
+            <input type="email" id="email" placeholder="Email address (e.g., yourname@my.fisk.edu)" required>
+            <button type="submit" id="signup">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            const emailInput = document.getElementById('email');
+            const emailValue = emailInput.value;
+            const fiskEmailPattern = /@my\.fisk\.edu$/;
+
+            if (!fiskEmailPattern.test(emailValue)) {
+                alert('Please use a valid "@my.fisk.edu" email address.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+</body>
+</html>
