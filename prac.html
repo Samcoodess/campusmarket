@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Style for overlay */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        /* Style for the form */
+        .listing-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Style for the close button */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="dropdown">
+        <button class="dropbtn">Categories</button>
+        <div class="dropdown-content">
+            <a href="prac.html">Electronics</a>
+            <a href="#">Furniture</a>
+            <a href="#">Academics</a>
+        </div>
+    </div>
+    <a href="#" id="openForm">Post</a>
+</nav>
+
+<!-- Placeholder -->
+<div id="placeholder" onclick="openForm()">
+    <p>Do you have anything to sell?</p>
+</div>
+
+<!-- Overlay form -->
+<div class="overlay" id="overlay">
+    <div class="listing-form">
+        <span class="close-btn" onclick="closeForm()">&times;</span>
+        <!-- Your form content goes here -->
+        <form>
+            <!-- Add your form fields (e.g., title, description, price, images) here -->
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required><br>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea><br>
+
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price" required><br>
+
+            <!-- Add more fields as needed -->
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+
+<script>
+    function openForm() {
+        document.getElementById("overlay").style.display = "flex";
+    }
+
+    function closeForm() {
+        document.getElementById("overlay").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
