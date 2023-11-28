@@ -29,7 +29,6 @@ class NewItemForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(NewItemForm, self).__init__(*args, **kwargs)
-        # Add choices to the category field
         self.fields['category'].queryset = Category.objects.all()
 
 class EditItemForm(forms.ModelForm):

@@ -4,6 +4,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 
 from .forms import NewItemForm, EditItemForm
 from .models import Category, Item
+from django.contrib.auth import logout
+
 
 def items(request):
     query = request.GET.get('query', '')
