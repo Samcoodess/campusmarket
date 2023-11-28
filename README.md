@@ -4,11 +4,12 @@
 
 The CampusMarket project is a collaborative project by Sambridhi Deo and Manisha Basnet, developed as part of our sophomore seminar project. This web application is designed to provide a platform for buying and selling items within the campus community. The project utilizes Django, HTML, Tailwind CSS, and SQLite3 database.
 <div style="display: flex; justify-content: space-between;">
-    <img src="media/tools/django.png" alt="Django" width="100" height="50">
-    <img src="media/tools/html.png" alt="HTML" width="100" height="50">
-    <img src="media/tools/css.png" alt="Tailwind CSS" width="100" height="50">
-    <img src="/Users/sambridhideo/dev/campusmarket/media/tools/sqlite.jpg" alt="SQLite" width="100" height="50">
+    <img src="media/tools/django.png" alt="Django" width="100" height="50" style="margin-right: 10px;">
+    <img src="media/tools/html.png" alt="HTML" width="100" height="50" style="margin-right: 10px;">
+    <img src="media/tools/css.png" alt="Tailwind CSS" width="100" height="50" style="margin-right: 10px;">
+    <img src="media/tools/sqlite.jpg" alt="SQLite" width="100" height="50">
 </div>
+
 
 
 ## Project Structure
